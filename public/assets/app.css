@@ -1,0 +1,115 @@
+.modal-container {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 10;
+    overflow-y: auto;
+}
+
+.modal-container1{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 100vh;
+    padding-left: 1rem/* 16px */;
+    padding-right: 1rem/* 16px */;
+    padding-top: 1rem/* 16px */;
+    padding-bottom: 2.5rem/* 40px */;
+    text-align: center;
+}
+
+@media (min-width: 640px) {
+    .sm\:block {
+        display: block;
+    }
+}
+
+@media (min-width: 640px) {
+    .sm\:p-0 {
+        padding: 0px;
+    }
+}
+
+.modal-container2{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    transform: var(--tw-transform);
+}
+
+.modal-container3{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+    opacity: 0.75;
+}
+
+.modal-container4{
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .sm\:inline-block {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 640px) {
+    .sm\:align-middle {
+        vertical-align: middle;
+    }
+}
+
+@media (min-width: 640px) {
+    .sm\:h-screen {
+        height: 100vh;
+    }
+}
+
+.modal-container5{
+    display: inline-block;
+    width: 100%;
+    vertical-align: bottom;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    border-radius: 0.5rem/* 8px */;
+    text-align: left;
+    overflow: hidden;
+    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    transform: var(--tw-transform);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+@media (min-width: 640px) {
+    .sm\:w-full {
+        width: 100%;
+    }
+}
+
+@media (min-width: 640px) {
+    .sm\:align-middle {
+        vertical-align: middle;
+    }
+}
+
+@media (min-width: 640px) {
+    .sm\:my-8 {
+        margin-top: 2rem/* 32px */;
+        margin-bottom: 2rem/* 32px */;
+    }
+}
