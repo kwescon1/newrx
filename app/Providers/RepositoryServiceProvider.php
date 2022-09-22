@@ -3,7 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Modules\School\Repositories\SchoolRepository;
 use App\Modules\Students\Repositories\StudentRepository;
+use App\Modules\School\Contracts\SchoolRepositoryInterface;
 use App\Modules\Students\Contracts\StudentRepositoryInterface;
 
 class RepositoryServiceProvider extends ServiceProvider
@@ -17,6 +19,7 @@ class RepositoryServiceProvider extends ServiceProvider
     {
         //
         $this->app->bind(StudentRepositoryInterface::class, StudentRepository::class);
+        $this->app->bind(SchoolRepositoryInterface::class, SchoolRepository::class);
     }
 
     /**

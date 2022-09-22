@@ -90,7 +90,7 @@
                 <!-- small box -->
                 <div class="small-box bg-warning">
                     <div class="inner">
-                        <h3>44</h3>
+                        <h3>{{ $studentCount }}</h3>
 
                         <p>Students</p>
                     </div>
@@ -105,9 +105,9 @@
                 <!-- small box -->
                 <div class="small-box bg-danger">
                     <div class="inner">
-                        <h3>65</h3>
+                        <h3>{{ $categories }}</h3>
 
-                        <p>Unique Visitors</p>
+                        <p>Categories</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-pie-graph"></i>
@@ -119,7 +119,7 @@
         </div>
         <!-- /.row -->
         <!-- Main row -->
-        <div class="row">
+        {{-- <div class="row">
             <!-- Left col -->
             <section class="col-lg-7 connectedSortable">
                 <!-- Custom tabs (Charts with tabs)-->
@@ -644,7 +644,7 @@
                 <!-- /.card -->
             </section>
             <!-- right col -->
-        </div>
+        </div> --}}
         <!-- /.row (main row) -->
     </div><!-- /.container-fluid -->
 </section>

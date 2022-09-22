@@ -4,18 +4,15 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Exceptions\NotFoundException;
-use App\Http\Resources\CategoryResource;
-use App\Modules\Services\CategoryService;
-use App\Http\Resources\ShowCategoryResource;
+use App\Http\Resources\ListSchoolResource;
+use App\Modules\School\Contracts\SchoolServiceInterface;
 
-class CategoryController extends Controller
+class SchoolController extends Controller
 {
-    private $categoryService;
-
-    public function __construct(CategoryService $categoryService)
+    private $schoolService;
+    public function __construct(SchoolServiceInterface $schoolService)
     {
-        $this->category = $categoryService;
+        $this->schoolService = $schoolService;
     }
     /**
      * Display a listing of the resource.
@@ -24,9 +21,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-
+        //
         try {
-            return response()->success(CategoryResource::collection($this->category->allCategories()));
+            return response()->success(ListSchoolResource::collection($this->schoolService->index()));
         } catch (\Exception $e) {
             \Log::error($e->getMessage());
             return response()->error($e->getMessage());
@@ -53,14 +50,6 @@ class CategoryController extends Controller
     public function show($id)
     {
         //
-        try {
-            return response()->success(new ShowCategoryResource($this->category->show($id)));
-        } catch (NotFoundException $e) {
-            return response()->notfound($e->getMessage());
-        } catch (\Exception $e) {
-            \Log::error($e->getMessage());
-            return response()->error($e->getMessage());
-        }
     }
 
     /**

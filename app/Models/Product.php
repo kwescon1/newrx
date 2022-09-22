@@ -25,6 +25,6 @@ class Product extends Model
             return;
         }
 
-        return Storage::url($value);
+        return env('APP_URL') . Storage::url($value);
     }
 }

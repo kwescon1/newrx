@@ -27,7 +27,10 @@ Route::post("/login", [App\Http\Controllers\Api\AuthController::class, 'login'])
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post("/logout", [App\Http\Controllers\Api\AuthController::class, 'logout']);
+
+    Route::apiResource('categories', App\Http\Controllers\Api\CategoryController::class);
+
+    Route::apiResource('products', App\Http\Controllers\Api\ProductController::class);
 });
 
-Route::apiResource('category', App\Http\Controllers\Api\CategoryController::class);
-// Route::apiResource('inventory', App\Http\Controllers\Api\InventoryController::class);
+Route::get('schools', [App\Http\Controllers\Api\SchoolController::class, 'index']);

@@ -6,7 +6,7 @@
         <div class="login-logo">
             <a href="#">
                 {{-- <img height="100px" width="100px" src="{{ asset('frontend/images/icons/logo-02.png') }}"> --}}
-                CONTRA</a>
+                NewRx</a>
         </div>
         <!-- /.login-logo -->
         <div class="card">

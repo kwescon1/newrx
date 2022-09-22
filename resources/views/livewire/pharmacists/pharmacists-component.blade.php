@@ -3,7 +3,7 @@
         Articles
     @endsection
     @section('page')
-        Articles
+        Pharmacists
     @endsection
     @section('links')
         <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">

@@ -3,23 +3,29 @@
 namespace App\Modules\Services;
 
 use App\Models\Category;
+use App\Exceptions\NotFoundException;
 
-class CategoryService {
+class CategoryService
+{
 
-    public function allCategories(){
+    public function allCategories()
+    {
         return Category::all();
     }
 
-    public function catWithInventories(){
-        return Category::with('inventories')->get();
-    }
+    // public function store(array $data)
+    // {
+    //     return Category::create($data);
+    // }
 
-    public function store(array $data){
-        return Category::create($data);
-    }
+    public function show($id): ?object
+    {
+        $category = Category::with('products')->where('id', $id)->first();
 
-    public function show($id) :? object{
-        return Category::with('inventories')->where('id',$id)->first();
+        if (!$category) {
+            throw new NotFoundException("Category Not Found");
+        }
+
+        return $category;
     }
-    
 }

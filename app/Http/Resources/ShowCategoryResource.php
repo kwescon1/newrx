@@ -17,8 +17,8 @@ class ShowCategoryResource extends JsonResource
         return [
             "category_id" => $this->id,
             "category_name" => $this->name,
-            "inventories" => InventoryResource::collection($this->inventories),
-            
+            "products" => ListCategoryProduct::collection($this->products),
+
         ];
     }
 }

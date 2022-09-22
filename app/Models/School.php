@@ -13,4 +13,9 @@ class School extends Model
     protected $table = 'schools';
 
     protected $guarded = ['id'];
+
+    public function hostels()
+    {
+        return $this->hasMany(Hostel::class, 'school_id');
+    }
 }

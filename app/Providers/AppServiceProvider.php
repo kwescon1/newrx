@@ -10,7 +10,9 @@ use Illuminate\Support\{
 };
 
 use App\Modules\Auth\Contracts\AuthServiceInterface;
+use App\Modules\School\Contracts\SchoolServiceInterface;
 use App\Modules\Auth\Services\AuthService;
+use App\Modules\School\Services\SchoolService;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         $this->app->bind(AuthServiceInterface::class, AuthService::class);
+        $this->app->bind(SchoolServiceInterface::class, SchoolService::class);
     }
 
     /**
